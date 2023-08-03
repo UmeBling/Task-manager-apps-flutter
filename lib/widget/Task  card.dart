@@ -1,7 +1,11 @@
 import 'package:flutter/cupertino.dart';
 
 class TaskCard extends StatefulWidget {
-  const TaskCard({super.key});
+  final String title;
+  final String description;
+
+  const TaskCard({required Key key, required this.title, required this.description})
+      : super(key: key);
 
   @override
   State<TaskCard> createState() => _TaskCardState();
@@ -13,8 +17,8 @@ class _TaskCardState extends State<TaskCard> {
     return Container(
       width: double.infinity,
       decoration: BoxDecoration(
-          color: Color(0xfff2f3f8),
-          borderRadius: BorderRadius.circular(10)
+        color: Color(0xfff2f3f8),
+        borderRadius: BorderRadius.circular(10),
       ),
       padding: const EdgeInsets.all(15),
       margin: EdgeInsets.only(
@@ -23,16 +27,18 @@ class _TaskCardState extends State<TaskCard> {
         left: 15,
         right: 15,
       ),
-
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text("Task one", style: TextStyle(fontSize: 17, fontWeight: FontWeight.w400),),
-          Text("Your personal task"),
+          Text(
+            widget.title,
+            style: TextStyle(fontSize: 17, fontWeight: FontWeight.w400),
+          ),
+          Text(widget.description),
           Align(
             alignment: Alignment.centerRight,
             child: Text(DateTime.now().toString().split(".")[0]),
-          )
+          ),
         ],
       ),
     );

@@ -16,9 +16,24 @@ class teskbar extends StatelessWidget {
       
       body:Column(
         children: [
-          TaskCard(),
-          TaskCard(),
-          TaskCard()
+          TaskCard(
+            key: UniqueKey(), // Provide a Key for the TaskCard widget
+            title: "Task One",
+            description: "Your personal task",
+          ),
+          TaskCard(
+            key: UniqueKey(), // Provide a Key for the TaskCard widget
+            title: "Task Tow",
+            description: "Sunday 6 Aug I have a MGT201 Quiz 2 Chapter-8,10. ",
+          ),
+          TaskCard(
+            key: UniqueKey(), // Provide a Key for the TaskCard widget
+            title: "Task Three",
+            description: "8 Aug have CSE301 quiz DFA Minimization & Context-Free Grammar.",
+          )
+
+
+
         ],
       ),
 
