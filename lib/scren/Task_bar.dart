@@ -13,7 +13,6 @@ class teskbar extends StatelessWidget {
         backgroundColor: Colors.black,
           centerTitle: true,
       ),
-      
       body:Column(
         children: [
           TaskCard(
@@ -23,17 +22,14 @@ class teskbar extends StatelessWidget {
           ),
           TaskCard(
             key: UniqueKey(), // Provide a Key for the TaskCard widget
-            title: "Task Tow",
-            description: "Sunday 6 Aug I have a MGT201 Quiz 2 Chapter-8,10. ",
+            title: "Task Two",
+            description: "Groceries shopping ",
           ),
           TaskCard(
             key: UniqueKey(), // Provide a Key for the TaskCard widget
             title: "Task Three",
-            description: "8 Aug have CSE301 quiz DFA Minimization & Context-Free Grammar.",
+            description: "Quiz today on Compiler.",
           )
-
-
-
         ],
       ),
 

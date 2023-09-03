@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:flutter/material.dart';
 import 'package:flutterui/scren/Home.dart';
 import 'package:flutterui/scren/Task_bar.dart';
